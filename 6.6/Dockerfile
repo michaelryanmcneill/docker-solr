@@ -12,7 +12,7 @@ RUN apt-get update && \
 
 ENV SOLR_USER 1001
 ENV SOLR_GROUP 0
-ENV SOLR_UID 8983
+ENV SOLR_UID 1001
 ENV SOLR_HOME /opt/solr-data
 
 #RUN groupadd -r -g $SOLR_UID $SOLR_USER && \
