@@ -8,7 +8,7 @@ if [[ "$VERBOSE" = "yes" ]]; then
 fi
 
 if [ ! -z "$SOLR_DATA_DIR" ]; then
-    find "$SOLR_DATA_DIR" -maxdepth 1 -mindepth 1 -type d -exec ln -s {} /opt/solr/server/core/ ';'
+    find "$SOLR_DATA_DIR" -maxdepth 1 -mindepth 1 -type d -exec ln -s {} /opt/solr/server/solr/ ';'
 fi
 
 . /opt/docker-solr/scripts/run-initdb
