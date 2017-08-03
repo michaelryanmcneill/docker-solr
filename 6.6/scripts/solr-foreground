@@ -13,4 +13,4 @@ fi
 
 . /opt/docker-solr/scripts/run-initdb
 
-exec solr -f "$@"
+exec solr -p 8080 -f "$@"
