@@ -7,6 +7,10 @@ if [[ "$VERBOSE" = "yes" ]]; then
     set -x
 fi
 
+if [[ ! -z $SOLR_HOME && "$(ls -A /opt/solr-data)" ]]; then
+    cp -R /opt/solr/server/solr/* $SOLR_HOME/
+fi
+
 . /opt/docker-solr/scripts/run-initdb
 
 exec solr -f "$@"
